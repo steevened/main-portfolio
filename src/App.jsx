@@ -25,7 +25,7 @@ function App() {
   return (
     <div className='h-full min-h-screen bg-slate-600'>
       <Header isToggle={isToggle} handleTogle={handleTogle} />
-      <Hero />
+      <Hero setIsToggle={setIsToggle} />
     </div>
   )
 }
