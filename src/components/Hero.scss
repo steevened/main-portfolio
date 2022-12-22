@@ -10,6 +10,7 @@
   0% {
     transform: translateY(-200%);
     opacity: 0;
+    height: 5px;
   }
   15% {
     opacity: 0.7;
@@ -19,6 +20,7 @@
     opacity: 1;
     transform: translateY(0%);
   }
+
   85% {
     opacity: 0.7;
   }

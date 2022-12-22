@@ -1,7 +1,10 @@
 import React from 'react'
 import { CgClose } from 'react-icons/cg'
+import NavbarItem from './NavbarItem'
 
 const NavbarList = ({ isToggle, handleTogle }) => {
+  const links = ['work', 'about', 'skills', 'contact']
+
   return (
     <div
       className={`absolute h-screen w-4/6 bg-white z-50 ${
@@ -16,13 +19,13 @@ const NavbarList = ({ isToggle, handleTogle }) => {
       >
         <CgClose className='text-2xl' />
       </button>
-      <div
-        className={`${
-          isToggle ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'
-        } delay-[0.6s] transition-all duration-500`}
-      >
-        <p>NavbarList</p>
-      </div>
+      <ul className='mt-10 ml-4 flex flex-col gap-10 text-3xl'>
+        {links.map((link) => (
+          <NavbarItem isToggle={isToggle}>
+            <p>{link}</p>
+          </NavbarItem>
+        ))}
+      </ul>
     </div>
   )
 }
