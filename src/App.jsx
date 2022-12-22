@@ -23,7 +23,11 @@ function App() {
   // console.log(isToggle)
 
   return (
-    <div className='h-full min-h-screen text-slate-300'>
+    <div
+      className={`h-full min-h-screen text-slate-300 ${
+        isToggle ? 'overflow-y-hidden' : ''
+      }`}
+    >
       <Header
         isToggle={isToggle}
         handleTogle={handleTogle}
