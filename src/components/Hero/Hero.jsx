@@ -15,9 +15,9 @@ const Hero = ({ setIsToggle }) => {
     <div
       onClick={() => setIsToggle(false)}
       style={homeStyle}
-      className={`bg-fixed min-h-screen w-full`}
+      className={`bg-fixed min-h-screen w-full relative`}
     >
-      <div className='absolute inset-0 flex flex-col justify-center items-center text-slate-300 text-center text-2xl  bg-black/30 px-5'>
+      <div className='absolute  inset-0 flex flex-col justify-center items-center text-slate-300 text-center text-2xl  bg-black/30 px-5'>
         <h1 className='font-bold '>
           HELLO
           <span className='block mt-5 leading-10 font-normal'>

@@ -6,7 +6,7 @@ const NavbarItem = ({ children, isToggle, i }) => {
     <div
       className={`${
         isToggle ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'
-      }  delay-${i} transition-all duration-500 text-slate-700`}
+      }  delay-${i} transition-all ease-in-out duration-500 text-slate-700`}
     >
       {children}
     </div>

@@ -4,13 +4,12 @@ import NavbarList from '../../components/Navbar/NavbarList'
 
 const Hero = ({ isToggle, handleTogle, setIsToggle }) => {
   return (
-    <div className=''>
+    <div className='relative z-50'>
       <Navbar
         isToggle={isToggle}
         handleTogle={handleTogle}
         setIsToggle={setIsToggle}
       />
-      <NavbarList isToggle={isToggle} handleTogle={handleTogle} />
     </div>
   )
 }

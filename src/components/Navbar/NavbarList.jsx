@@ -3,17 +3,17 @@ import { CgClose } from 'react-icons/cg'
 import NavbarItem from './NavbarItem'
 
 const NavbarList = ({ isToggle, handleTogle }) => {
-  const links = ['work', 'about', 'skills', 'contact']
+  const links = ['Work', 'About', 'Skills', 'Contact']
 
-  console.log(isToggle)
+  // console.log(isToggle)
 
   return (
     <div
-      className={`absolute w-full flex h-screen overflow-hidden transition-all duration-500 z-50 ${
+      className={`fixed top-0 bottom-0 w-4/6  h-screen overflow-hidden transition-all ease-in-out duration-500 z-50 ${
         isToggle ? 'translate-x-0' : '-translate-x-full'
       }`}
     >
-      <div className='w-4/6 h-full bg-slate-200 z-50 relative'>
+      <div className='h-full bg-slate-200 z-50 relative'>
         <button
           onClick={handleTogle}
           className={`transition-all duration-500 z-50 absolute top-4 right-3 cursor-pointer ${
@@ -30,12 +30,6 @@ const NavbarList = ({ isToggle, handleTogle }) => {
           ))}
         </ul>
       </div>
-      <div
-        onClick={handleTogle}
-        className={`h-full w-2/6 z-40 transition-all duration-500  ${
-          isToggle ? 'bg-black/50 delay-200' : 'bg-transparent'
-        }`}
-      ></div>
     </div>
   )
 }
