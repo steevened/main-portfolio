@@ -11,7 +11,7 @@ import {
   Contact,
 } from './container'
 import { Router, Route } from 'react-router-dom'
-import Hero from './components/Hero'
+import Hero from './components/Hero/Hero'
 
 function App() {
   const [isToggle, setIsToggle] = useState(false)
@@ -23,9 +23,14 @@ function App() {
   // console.log(isToggle)
 
   return (
-    <div className='h-full min-h-screen bg-slate-600'>
-      <Header isToggle={isToggle} handleTogle={handleTogle} />
+    <div className='h-full min-h-screen text-slate-300'>
+      <Header
+        isToggle={isToggle}
+        handleTogle={handleTogle}
+        setIsToggle={setIsToggle}
+      />
       <Hero setIsToggle={setIsToggle} />
+      <Work />
     </div>
   )
 }

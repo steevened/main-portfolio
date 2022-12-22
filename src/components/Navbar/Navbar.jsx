@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import './Navbar.scss'
 
-const Navbar = ({ isToggle, handleTogle }) => {
+const Navbar = ({ isToggle, handleTogle, setIsToggle }) => {
   // console.log(isToggle)
 
   return (
@@ -17,13 +17,13 @@ const Navbar = ({ isToggle, handleTogle }) => {
             <label
               htmlFor='toggle'
               className={`group overflow-hidden  p-2 hover:text-red-500 transition-all duration-500 delay-200 cursor-pointer ${
-                isToggle ? 'text-red-300' : ''
+                isToggle ? 'text-red-300' : 'text-slate-300'
               }`}
             >
               Menu
               <div
-                className={`absolute w-0 group-hover:w-4/6  h-[2px] bg-red-300 -bottom-1  transition-all duration-300 -translate-x-1/2 left-1/2 ${
-                  isToggle ? 'w-4/6' : ''
+                className={`absolute  group-hover:w-4/6  h-[2px] bg-red-300 -bottom-1  transition-all duration-300 -translate-x-1/2 left-1/2 ${
+                  isToggle ? 'w-4/6' : 'w-0'
                 }`}
               ></div>
             </label>

@@ -13,15 +13,15 @@ const NavbarList = ({ isToggle, handleTogle }) => {
     >
       <button
         onClick={handleTogle}
-        className={`transition-all delay-700 absolute top-4 right-3 cursor-pointer ${
-          !isToggle ? 'scale-0 delay-75' : ''
+        className={`transition-all duration-500 absolute top-4 right-3 cursor-pointer ${
+          !isToggle ? 'scale-0 delay-75' : 'delay-[1300ms]'
         }`}
       >
         <CgClose className='text-2xl' />
       </button>
       <ul className='mt-10 ml-4 flex flex-col gap-10 text-3xl'>
-        {links.map((link) => (
-          <NavbarItem isToggle={isToggle}>
+        {links.map((link, i) => (
+          <NavbarItem key={i} i={i} isToggle={isToggle}>
             <p>{link}</p>
           </NavbarItem>
         ))}

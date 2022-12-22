@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
+import './Navbar.scss'
 
-const NavbarItem = ({ children, isToggle }) => {
+const NavbarItem = ({ children, isToggle, i }) => {
   return (
     <div
       className={`${
         isToggle ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'
-      } delay-[0.6s] transition-all duration-500`}
+      }  delay-${i} transition-all duration-500`}
     >
       {children}
     </div>

@@ -1,11 +1,15 @@
 import React from 'react'
-import Navbar from '../../components/Navbar'
-import NavbarList from '../../components/NavbarList'
+import Navbar from '../../components/Navbar/Navbar'
+import NavbarList from '../../components/Navbar/NavbarList'
 
-const Hero = ({ isToggle, handleTogle }) => {
+const Hero = ({ isToggle, handleTogle, setIsToggle }) => {
   return (
     <div className=''>
-      <Navbar isToggle={isToggle} handleTogle={handleTogle} />
+      <Navbar
+        isToggle={isToggle}
+        handleTogle={handleTogle}
+        setIsToggle={setIsToggle}
+      />
       <NavbarList isToggle={isToggle} handleTogle={handleTogle} />
     </div>
   )
