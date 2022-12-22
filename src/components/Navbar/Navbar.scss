@@ -10,3 +10,11 @@
 .delay-3 {
   transition-delay: 0.9s;
 }
+
+.scrolldown {
+  transform: translate3d(0, -100%, 0);
+}
+
+.scrollup {
+  filter: drop-shadow(10px 10px 20px rgb(0, 0, 0));
+}

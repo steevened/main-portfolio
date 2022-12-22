@@ -2,11 +2,15 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import './Navbar.scss'
 
-const Navbar = ({ isToggle, handleTogle, setIsToggle }) => {
+const Navbar = ({ isToggle, handleTogle, setIsToggle, isScrollUp }) => {
   // console.log(isToggle)
 
   return (
-    <div className='fixed w-full bg-transparent py-4 text-center text-slate-300'>
+    <div
+      className={`fixed duration-500 w-full bg-transparent py-4 text-center text-slate-300 z-50 transition-all ${
+        isScrollUp ? 'scrolldown' : 'scrollup '
+      }`}
+    >
       <div>
         STEEVENED <span className='text-xl text-red-500'>.</span>
       </div>

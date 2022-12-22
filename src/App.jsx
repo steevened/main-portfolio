@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { filterProps, motion } from 'framer-motion'
 import './App.css'
 import {
@@ -16,12 +16,41 @@ import NavbarList from './components/Navbar/NavbarList'
 
 function App() {
   const [isToggle, setIsToggle] = useState(false)
+  const [lastScroll, setLastScroll] = useState(0)
+  const [currentScroll, setCurrentScroll] = useState(window.pageYOffset)
+  const [isScrollUp, setIsScrollUp] = useState(false)
 
   const handleTogle = () => {
     setIsToggle(!isToggle)
   }
 
-  // console.log(isToggle)
+  useEffect(() => {
+    if (isToggle) {
+      document.body.classList.add('disable')
+    } else {
+      document.body.classList.remove('disable')
+    }
+  }, [isToggle])
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      setCurrentScroll(window.pageYOffset)
+    })
+
+    if (currentScroll <= 0) {
+      setIsScrollUp(false)
+    }
+    if (currentScroll > lastScroll && !isScrollUp) {
+      setIsScrollUp(true)
+    }
+    if (currentScroll < lastScroll && isScrollUp) {
+      setIsScrollUp(false)
+    }
+
+    setLastScroll(currentScroll)
+  }, [currentScroll])
+
+  // console.log(isScrollUp)
 
   return (
     <div
@@ -33,6 +62,7 @@ function App() {
         isToggle={isToggle}
         handleTogle={handleTogle}
         setIsToggle={setIsToggle}
+        isScrollUp={isScrollUp}
       />
       <NavbarList isToggle={isToggle} handleTogle={handleTogle} />
       <div
