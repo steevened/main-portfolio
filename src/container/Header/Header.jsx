@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import NavbarList from '../../components/Navbar/NavbarList'
 
-const Hero = ({ isToggle, handleTogle, setIsToggle, isScrollUp }) => {
+const Hero = ({ isToggle, handleTogle, setIsToggle, isScrollUp, isSticky }) => {
   return (
     // <div className='relative z-50'>
     <Navbar
@@ -10,6 +10,7 @@ const Hero = ({ isToggle, handleTogle, setIsToggle, isScrollUp }) => {
       handleTogle={handleTogle}
       setIsToggle={setIsToggle}
       isScrollUp={isScrollUp}
+      isSticky={isSticky}
     />
     // </div>
   )

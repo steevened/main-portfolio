@@ -19,6 +19,7 @@ function App() {
   const [lastScroll, setLastScroll] = useState(0)
   const [currentScroll, setCurrentScroll] = useState(window.pageYOffset)
   const [isScrollUp, setIsScrollUp] = useState(false)
+  const [isSticky, setIsSticky] = useState(false)
 
   const handleTogle = () => {
     setIsToggle(!isToggle)
@@ -47,22 +48,25 @@ function App() {
       setIsScrollUp(false)
     }
 
+    if (window.scrollY > 0) {
+      setIsSticky(true)
+    } else {
+      setIsSticky(false)
+    }
+
     setLastScroll(currentScroll)
   }, [currentScroll])
 
-  // console.log(isScrollUp)
+  // console.log(isSticky)
 
   return (
-    <div
-      className={`h-full min-h-screen text-slate-300  relative ${
-        isToggle ? 'overflow-hidden ' : ''
-      }`}
-    >
+    <div className={`h-full min-h-screen text-slate-300  relative`}>
       <Header
         isToggle={isToggle}
         handleTogle={handleTogle}
         setIsToggle={setIsToggle}
         isScrollUp={isScrollUp}
+        isSticky={isSticky}
       />
       <NavbarList isToggle={isToggle} handleTogle={handleTogle} />
       <div
