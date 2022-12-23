@@ -4,7 +4,7 @@
     "title": "Github Finder",
     "desc": { "short": "short description", "lg": "large description" },
     "imgs": {
-      "main": "../src/assets/img1.png",
+      "main": "./../src/assets/img1.png",
       "sec": "sec"
     },
     "code": "code",
@@ -15,7 +15,7 @@
     "title": "Ecommerce",
     "desc": { "short": "short description", "lg": "large description" },
     "imgs": {
-      "main": "../src/assets/img3.png",
+      "main": "./../src/assets/img3.png",
       "sec": "sec"
     },
     "code": "code",
@@ -26,7 +26,7 @@
     "title": "Pokedex",
     "desc": { "short": "short description", "lg": "large description" },
     "imgs": {
-      "main": "../src/assets/img2.png",
+      "main": "./../src/assets/img2.png",
       "sec": "sec"
     },
     "code": "code",

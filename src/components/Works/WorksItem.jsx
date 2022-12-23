@@ -1,15 +1,24 @@
 import React from 'react'
 import { AiOutlineEye } from 'react-icons/ai'
 import { BsCodeSlash } from 'react-icons/bs'
+import img1 from '../../assets/img1.png'
+import img2 from '../../assets/img2.png'
+import img3 from '../../assets/img3.png'
+const imgs = [img1, img2, img3]
 
-const WorksItem = ({ work }) => {
-  const { title, desc, code, imgs, live } = work
+const WorksItem = ({ work, i }) => {
+  const { title, desc, code, live } = work
   return (
     <div className='relative group overflow-hidden text-white'>
       <div className='absolute inset-0 group-hover:bg-black/70 z-10 transition-colors duration-700'></div>
-      <figure className='w-full group-hover:scale-110 transition-all duration-700'>
-        <img className='' src={imgs.main} alt='work' />
+
+      <figure
+        key={i}
+        className='w-full group-hover:scale-110 transition-all duration-700'
+      >
+        <img src={imgs[i]} alt='work' />
       </figure>
+
       <div className='absolute  left-1/2 -translate-x-1/2 -bottom-full group-hover:bottom-4 transition-all duration-500 z-20 text-center'>
         <h3 className='text-base'>{title}</h3>
         <p className='text-xs opacity-70'>{desc.short}</p>
