@@ -12,12 +12,12 @@ const WorksItem = ({ work, i, selectedId }) => {
   // console.log(i)
   return (
     <div
-      className={`relative group overflow-hidden text-white transition-all duration-500 ${
+      className={`relative cat-${selectedId}  group overflow-hidden text-white transition-all duration-500 ${
         selectedId === 0
-          ? 'scale-100 h-full opacity-100'
+          ? 'visible'
           : selectedId === categoryId
-          ? 'order-first scale-100 h-full opacity-100'
-          : 'order-last scale-0 h-0 opacity-0'
+          ? 'order-first visible'
+          : 'order-last hidden'
       }`}
     >
       <div className='absolute inset-0 group-hover:bg-black/70 z-10 transition-colors duration-700'></div>

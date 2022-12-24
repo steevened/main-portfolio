@@ -6,7 +6,7 @@ import WorksItem from '../../components/Works/WorksItem'
 const Works = () => {
   const [selectedId, setSelectedId] = useState(0)
 
-  console.log(selectedId)
+  // console.log(selectedId)
 
   return (
     <div className='bg-slate-900 py-10'>

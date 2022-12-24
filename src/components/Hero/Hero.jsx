@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import heroImg from '../../assets/hero.png'
 
 import './Hero.scss'
@@ -8,14 +8,17 @@ const Hero = ({ setIsToggle }) => {
     backgroundImage: `url("${heroImg}")`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    backgroundPosition: 'center center',
+    backgroundPosition: `50% -${window.scrollY / 5}px`,
+    height: '100vh',
   }
+
+  // console.log(window.scrollY / 10)
 
   return (
     <div
       onClick={() => setIsToggle(false)}
       style={homeStyle}
-      className={`bg-fixed min-h-screen w-full relative`}
+      className={`bg-fixed  w-full relative`}
     >
       <div className='absolute  inset-0 flex flex-col justify-center items-center text-slate-300 text-center text-2xl  bg-black/30 px-5'>
         <h1 className='font-bold '>
