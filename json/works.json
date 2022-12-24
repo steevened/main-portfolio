@@ -9,7 +9,7 @@
     },
     "code": "code",
     "live": "live",
-    "categoryId": 0
+    "categoryId": 3
   },
   {
     "id": 2,
@@ -69,6 +69,6 @@
     },
     "code": "code",
     "live": "live",
-    "categoryId": 0
+    "categoryId": 3
   }
 ]

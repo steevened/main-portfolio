@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 const WorksFilter = ({ setSelectedId }) => {
   return (
-    <ul className='flex justify-between w-3/4 mx-auto my-5 h-auto'>
+    <ul className='flex justify-between w-3/4 mx-auto my-5'>
       {filters.map((filter, i) => (
         <li
           onClick={() => setSelectedId(i)}

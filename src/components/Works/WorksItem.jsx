@@ -9,11 +9,15 @@ import img3 from '../../assets/img3.png'
 const WorksItem = ({ work, i, selectedId }) => {
   const { title, desc, code, live, imgs, categoryId } = work
 
-  // console.log(categoryId)
+  // console.log(i)
   return (
     <div
-      className={`relative group overflow-hidden text-white ${
-        categoryId === i ? 'h-0' : ''
+      className={`relative group overflow-hidden text-white transition-all duration-500 ${
+        selectedId === 0
+          ? 'scale-100 h-full opacity-100'
+          : selectedId === categoryId
+          ? 'order-first scale-100 h-full opacity-100'
+          : 'order-last scale-0 h-0 opacity-0'
       }`}
     >
       <div className='absolute inset-0 group-hover:bg-black/70 z-10 transition-colors duration-700'></div>
