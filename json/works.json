@@ -8,7 +8,8 @@
       "sec": "sec"
     },
     "code": "code",
-    "live": "live"
+    "live": "live",
+    "categoryId": 0
   },
   {
     "id": 2,
@@ -19,7 +20,8 @@
       "sec": "sec"
     },
     "code": "code",
-    "live": "live"
+    "live": "live",
+    "categoryId": 1
   },
   {
     "id": 3,
@@ -30,6 +32,43 @@
       "sec": "sec"
     },
     "code": "code",
-    "live": "live"
+    "live": "live",
+    "categoryId": 2
+  },
+  {
+    "id": 4,
+    "title": "Ecommerce",
+    "desc": { "short": "short description", "lg": "large description" },
+    "imgs": {
+      "main": "./../src/assets/img3.png",
+      "sec": "sec"
+    },
+    "code": "code",
+    "live": "live",
+    "categoryId": 1
+  },
+  {
+    "id": 5,
+    "title": "Pokedex",
+    "desc": { "short": "short description", "lg": "large description" },
+    "imgs": {
+      "main": "../src/assets/img2.png",
+      "sec": "sec"
+    },
+    "code": "code",
+    "live": "live",
+    "categoryId": 2
+  },
+  {
+    "id": 6,
+    "title": "Pokedex",
+    "desc": { "short": "short description", "lg": "large description" },
+    "imgs": {
+      "main": "../src/assets/img1.png",
+      "sec": "sec"
+    },
+    "code": "code",
+    "live": "live",
+    "categoryId": 0
   }
 ]
