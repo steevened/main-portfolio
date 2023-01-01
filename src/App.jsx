@@ -78,6 +78,7 @@ function App() {
 
       <Hero setIsToggle={setIsToggle} />
       <Work />
+      <About />
     </div>
   )
 }
