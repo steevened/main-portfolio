@@ -6,7 +6,7 @@ const WorksFilter = ({ setSelectedId }) => {
       {filters.map((filter, i) => (
         <li
           onClick={() => setSelectedId(i)}
-          className='cursor-pointer hover:text-red-400 transition-all duration-500'
+          className='cursor-pointer hover:text-teal-400 transition-all duration-500'
           key={i}
         >
           <p>{filter}</p>

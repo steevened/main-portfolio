@@ -12,20 +12,20 @@ const Navbar = ({ isToggle, handleTogle, isScrollUp, isSticky }) => {
       } ${isScrollUp ? 'scrolldown' : 'scrollup '}`}
     >
       <div className='text-xl font-bold'>
-        STEEVENED <span className='text-xl text-red-500'>.</span>
+        STEEVENED <span className='text-xl text-amber-500'>.</span>
       </div>
 
       <div className='absolute right-2 top-1/2 -translate-y-1/2 '>
         <button>
           <label
             htmlFor='toggle'
-            className={`group overflow-hidden  p-2 hover:text-red-500 transition-all duration-500 delay-200 cursor-pointer ${
+            className={`group overflow-hidden  p-2 hover:text-amber-500 transition-all duration-500 delay-200 cursor-pointer ${
               isSticky ? 'text-slate-700' : ''
-            } ${isToggle ? 'text-red-300' : 'text-slate-300'}`}
+            } ${isToggle ? 'text-amber-300' : 'text-slate-300'}`}
           >
             Menu
             <div
-              className={`absolute  group-hover:w-4/6  h-[2px] bg-red-300 -bottom-1  transition-all duration-300 -translate-x-1/2 left-1/2 ${
+              className={`absolute  group-hover:w-4/6  h-[2px] bg-amber-300 -bottom-1  transition-all duration-300 -translate-x-1/2 left-1/2 ${
                 isToggle ? 'w-4/6' : 'w-0'
               }`}
             ></div>
