@@ -5,7 +5,7 @@ import { FiDownload } from 'react-icons/fi'
 
 const Works = () => {
   return (
-    <section className='pt-12 pb-24 bg-[#000] px-6'>
+    <section id='About' className='pt-12 pb-24 bg-[#000] px-6'>
       <h2 className='text-center text-4xl'>About Me</h2>
       <div className='flex flex-col md:flex-row md:gap-16 md:px-24'>
         <div className='relative mt-10 flex flex-1'>

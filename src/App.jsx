@@ -68,7 +68,11 @@ function App() {
         isScrollUp={isScrollUp}
         isSticky={isSticky}
       />
-      <NavbarList isToggle={isToggle} handleTogle={handleTogle} />
+      <NavbarList
+        isToggle={isToggle}
+        handleTogle={handleTogle}
+        setIsToggle={setIsToggle}
+      />
       <div
         onClick={() => setIsToggle(false)}
         className={`absolute inset-0 transition-all duration-500 z-10 ${

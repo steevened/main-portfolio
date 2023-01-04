@@ -9,7 +9,7 @@ const Works = () => {
   // console.log(selectedId)
 
   return (
-    <div className='bg-[#000] py-10'>
+    <div id='Work' className='bg-[#000] py-16 '>
       <h2 className='text-center text-4xl'>Works</h2>
 
       <WorksFilter setSelectedId={setSelectedId} />

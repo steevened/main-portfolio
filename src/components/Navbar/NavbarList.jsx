@@ -2,7 +2,7 @@ import React from 'react'
 import { CgClose } from 'react-icons/cg'
 import NavbarItem from './NavbarItem'
 
-const NavbarList = ({ isToggle, handleTogle }) => {
+const NavbarList = ({ isToggle, handleTogle, setIsToggle }) => {
   const links = ['Work', 'About', 'Skills', 'Contact']
 
   // console.log(isToggle)
@@ -25,7 +25,9 @@ const NavbarList = ({ isToggle, handleTogle }) => {
         <ul className='absolute inset-0  flex flex-col items-center justify-center gap-10 text-3xl'>
           {links.map((link, i) => (
             <NavbarItem key={i} i={i} isToggle={isToggle}>
-              <p>{link}</p>
+              <li onClick={() => setIsToggle(false)}>
+                <a href={`#${link}`}>{link}</a>
+              </li>
             </NavbarItem>
           ))}
         </ul>
